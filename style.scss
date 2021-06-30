@@ -18,6 +18,8 @@ body {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transition: all 2s;
+
     &::before {
       content: "";
       background: violet;
