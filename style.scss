@@ -1,0 +1,41 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    border: 1px solid cyan;
+    background: transparent;
+    font-size: 1rem;
+    padding: 2rem 4rem;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      background: violet;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      transition: all 1s;
+      z-index: -1;
+    }
+    &:hover::before {
+      transform: translateX(0);
+    }
+    &:hover {
+      color: whitesmoke;
+    }
+  }
+}
